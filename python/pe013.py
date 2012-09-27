@@ -103,8 +103,13 @@ answer = 0
 
 for i in range(100):
   answer += numberArray[i] / (10**35)
+
+answerString = ''
   
-print answer
+for j in range(10):
+  answerString += (list(str(answer))[j])
+  
+print answerString
   
   
   
