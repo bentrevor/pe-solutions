@@ -1,20 +1,21 @@
-#def isPalindrome(x):
-  #numString = str(x)
-  #if x < 10 or x % 10 == x / 10:
-    #return True
+def isPalindrome(x):
+  firstNum  = x / 100000 % 10
+  secondNum = x / 10000  % 10
+  thirdNum  = x / 1000   % 10
+  fourthNum = x / 100    % 10
+  fifthNum  = x / 10     % 10
+  sixthNum  = x          % 10
   
-def fact(x):
-  if x == 1:
-    return 1
-  return fact(x - 1) * x
+  if firstNum == sixthNum and secondNum == fifthNum and thirdNum == fourthNum:
+    return True
+  return False
   
-print fact(1)
-print fact(2)
-print fact(3)
-print fact(4)
-print fact(5)
-print fact(6)
-print fact(7)
-print fact(8)
-print fact(9)
-print fact(10)
+largest = 0
+
+for i in range(900, 1000):
+  for j in range(900, 1000):
+    prod = i * j
+    if isPalindrome(prod):
+      largest = max(prod, largest)
+      
+print largest
