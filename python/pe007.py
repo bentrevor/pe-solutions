@@ -1,3 +1,5 @@
+# Find the 10001st prime.
+
 import math
 
 def isPrime(x):
@@ -6,17 +8,13 @@ def isPrime(x):
       return False
   return True
   
-primeArray = [0]*10001
-primeArray[0] = 2
-answer = 3
-index = 1
+  
+answer = 2
+count = 1
 
-while primeArray[10000] == 0:
-#while index < 30:
-  if isPrime(answer):
-    print answer
-    primeArray[index] = answer
-    index += 1
+while count < 10001:
   answer += 1
+  if isPrime(answer):  
+    count += 1
 
-print primeArray[10000]
+print answer

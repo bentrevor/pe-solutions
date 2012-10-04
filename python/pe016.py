@@ -1,3 +1,5 @@
+# What is the sum of the digits of the number 21000?
+
 def sumOfDigits(x):
   answer = 0
   while(x > 0):

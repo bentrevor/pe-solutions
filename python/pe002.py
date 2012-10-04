@@ -1,14 +1,18 @@
+# By considering the terms in the Fibonacci sequence whose values do not exceed 
+# four million, find the sum of the even-valued terms.
 
-prev1 = 1
-prev2 = 1
-curr = 2
+# first few Fibonacci numbers
+fib1 = 1
+fib2 = 1
+current = 2
+
 total = 0
 
-while curr < 4000000:
-  if curr % 2 == 0:
-    total += curr
-  prev1 = prev2
-  prev2 = curr
-  curr = prev1 + prev2
+while current < 4000000:
+  if current % 2 == 0:
+    total += current
+  fib1 = fib2
+  fib2 = current
+  current = fib1 + fib2
 
 print total

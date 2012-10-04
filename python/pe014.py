@@ -1,3 +1,5 @@
+# Find the longest sequence using a starting number under one million.
+
 largest = 0
 largesti = 0
   

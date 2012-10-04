@@ -1,3 +1,4 @@
+# Starting in the top left corner in a 20 by 20 grid, how many routes are there to the bottom right corner?
 
 grid = [[int(n) for n in range(2, 22)] for m in range(2, 22)]
 grid[1][0] = 3
