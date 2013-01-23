@@ -1,14 +1,17 @@
 #lang racket
 
-(define (isprime x counter)
+(define (isprime-iter x counter)
   (if (> counter (/ x 2))
       true
       (if (= 0 (modulo x counter))
           false
-          (isprime x (+ counter 1)))))
+          (isprime-iter x (+ counter 1)))))
+
+(define (isprime x)
+  (isprime-iter x 2))
 
 (define (lpf bignumber counter)
-  (if (and (= 0 (modulo bignumber counter)) (isprime (/ bignumber counter) 2))
+  (if (and (= 0 (modulo bignumber counter)) (isprime (/ bignumber counter)))
       (/ bignumber counter)
       (lpf bignumber (+ counter 1))))
 
